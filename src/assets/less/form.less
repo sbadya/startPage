@@ -1,0 +1,45 @@
+.auth-form {
+	text-align: center;
+	transition: all 0.4s;
+
+	&:nth-last-child(n + 3),
+	&:not(:first-child):not(:last-child) {
+		&:after {
+			content: '';
+			display: block;
+			height: 4rem;
+		}
+	}
+
+	&__field {
+		margin-bottom: 20px;
+
+		&_error &_error-text {
+			display: block;
+		}
+
+		&_error-text {
+			color: #f04124;
+			display: none;
+			font-size: 13px;
+			margin-bottom: 5px;
+		}
+	}
+
+	&__label {
+		text-align: left;
+		margin-bottom: 7px;
+		padding-left: 5px;
+	}
+
+	&__input {
+		border-radius: 10px;
+		margin: 0;
+		padding: 10px 12px;
+	}
+
+	&__btn.btn {
+		text-transform: none;
+	}
+}
+
